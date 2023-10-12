@@ -1,6 +1,13 @@
 :root{
     --bg-light-100: rgb(255, 255, 255);
     --bg-light-200: rgb(251, 251, 251);
+    --bg-light-300: rgb(245, 245, 245);
+    --bg-light-500: rgb(200, 200, 200);
+    --bg-dark-500: rgb(5,5,5);
+    --bg-dark-400: rgb(10,10,10);
+    --bg-dark-300: rgb(35,35,35);
+    --bg-dark-200: rgb(50,50,50);
+    --bg-dark-100: rgb(70,70,70);
 }
 *{
     padding: 0;
@@ -8,10 +15,49 @@
     text-decoration: none;
 }
 body{
+    display: flex;
     background-color: var(--bg-light-200);
 }
 header{
     padding: 0 1.5rem;
+}
+/* Principales */
+.sidebar{
+    display: none;
+    width: 20rem;
+    height: 100vh;
+    background-color: var(--bg-dark-500);
+}
+.menu-exit{
+    display: flex;
+    justify-content: end;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    border-bottom: 0.1rem solid var(--bg-light-500);
+    color: var(--bg-light-500);
+}
+.exit:hover{
+    cursor: pointer;
+}
+.sidebar-open{
+    display: block;
+    position: fixed;
+}
+.sidebar .button-menu{
+    display: block;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    color: var(--bg-light-500);
+}
+.sidebar .button-menu .fa-solid{
+    margin-right: 1rem;
+}
+.sidebar .button-menu:hover{
+    color: var(--bg-light-100);
+    background:linear-gradient(to right,var(--bg-dark-300),var(--bg-dark-100));
+}
+.content{
+    width: 100%;
 }
 .navbar-dashboard{
     
@@ -44,11 +90,15 @@ header{
 .burger-menu:hover{
     cursor: pointer;
 }
-a{
-    color: black;
-}
 @media (min-width:768px) {
     .badge-dashboard{
         display: block;
+    }
+    /*Menu Dashboard*/
+    .menu-exit{
+        display: none;
+    }
+    .sidebar-open{
+        position: relative;
     }
 }
