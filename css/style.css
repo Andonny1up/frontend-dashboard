@@ -8,15 +8,17 @@
     --bg-dark-300: rgb(35,35,35);
     --bg-dark-200: rgb(50,50,50);
     --bg-dark-100: rgb(70,70,70);
+    --my-primary: rgb(255,56,56);
 }
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     text-decoration: none;
 }
 body{
     display: flex;
-    background-color: var(--bg-light-200);
+    background-color: var(--bg-light-300);
 }
 header{
     padding: 0 1.5rem;
@@ -30,11 +32,26 @@ header{
 }
 .menu-exit{
     display: flex;
+    height: 4rem;
     justify-content: end;
     padding: 1rem 1rem;
     font-size: 1.5rem;
     border-bottom: 0.1rem solid var(--bg-light-500);
     color: var(--bg-light-500);
+}
+.logo-content{
+    display: flex;
+    overflow: hidden;
+    padding: 1rem 0.7rem;
+    font-size: 1.5rem;
+    border-bottom: 0.1rem solid var(--bg-light-500);
+    color: var(--bg-light-100);
+    background-color: var(--my-primary);
+}
+.company-logo{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
 }
 .exit:hover{
     cursor: pointer;
@@ -43,14 +60,18 @@ header{
     display: block;
     position: fixed;
 }
+.menu ul{
+    width: 100%;
+}
 .sidebar .button-menu{
-    display: block;
+    display: flex;
+    width: 100%;
     padding: 1rem 1rem;
     font-size: 1.2rem;
     color: var(--bg-light-500);
 }
 .sidebar .button-menu .fa-solid{
-    margin-right: 1rem;
+    margin-right: 1.2rem;
 }
 .sidebar .button-menu:hover{
     color: var(--bg-light-100);
@@ -60,7 +81,6 @@ header{
     width: 100%;
 }
 .navbar-dashboard{
-    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -78,10 +98,6 @@ header{
 }
 .badge-dashboard{
     display: none;
-    padding: 0.5rem 0.5rem;
-    margin: 0 0.5rem;
-    background-color: var(--bg-light-100);
-    border-radius: 1rem;
 }
 /* Menu */
 .burger-menu, .fa-bell{
@@ -93,9 +109,31 @@ header{
 @media (min-width:768px) {
     .badge-dashboard{
         display: block;
+        padding: 0.5rem 0.5rem;
+        margin: 0 0.5rem;
+        background-color: var(--bg-light-100);
+        border-radius: 1rem;
     }
+    .badge-dashboard a{
+        color: var(--bg-dark-500);
+    }
+    .menu{
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+    .sidebar{
+        display: block;
+        width: 3.3rem;
+    }
+    .sidebar:hover, .sidebar-open,.sidebar-open > div{
+        width: 20rem;
+    }
+    /* .sidebar div{
+        width: 20rem;
+    } */
     /*Menu Dashboard*/
-    .menu-exit{
+    .menu-exit .exit{
         display: none;
     }
     .sidebar-open{
