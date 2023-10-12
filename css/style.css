@@ -1,0 +1,54 @@
+:root{
+    --bg-light-100: rgb(255, 255, 255);
+    --bg-light-200: rgb(251, 251, 251);
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    background-color: var(--bg-light-200);
+}
+header{
+    padding: 0 1.5rem;
+}
+.navbar-dashboard{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 3rem;
+}
+.navbar-dashboard .navbar-left{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.navbar-dashboard .navbar-right{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.badge-dashboard{
+    display: none;
+    padding: 0.5rem 0.5rem;
+    margin: 0 0.5rem;
+    background-color: var(--bg-light-100);
+    border-radius: 1rem;
+}
+/* Menu */
+.burger-menu, .fa-bell{
+    font-size: 20px;
+}
+.burger-menu:hover{
+    cursor: pointer;
+}
+a{
+    color: black;
+}
+@media (min-width:768px) {
+    .badge-dashboard{
+        display: block;
+    }
+}
