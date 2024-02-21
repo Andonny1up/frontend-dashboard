@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: #f9f9f9;
+    --color-danger: #f83b3b;
+    --color-success: #56ff50;
+    --color-warning: #ffdb0d;
+    --color-info: #00ccff;
+    --color-dark: #363949;
+
+    --color-background: #f6f6f9;
+
+    --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+
+}
+body{
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.heading-menu{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.heading-menu span{
+    color: var(--color-danger);
+}
+.navbar-menu{
+    height: 100vh;
+    max-width: 18rem;
+}
+.navbar-menu .top{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.navbar-menu .top .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.navbar-menu .top .logo img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+/*==== SIDEBAR ====*/
+.navbar-menu .sidebar{
+    padding: 1rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+}
+.navbar-menu .sidebar  a{
+    color: var(--color-dark);
+    display: flex;
+    text-decoration: none;
+}
+.nav_link_items{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+.dropdown-item{
+    overflow: hidden;
+}
+.dropdown-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+.dropdown-btn.arrow .ddown-arrow{
+    transform: rotate(-90deg);
+}
+.ddown-arrow{
+    margin-left: auto;
+    font-size: 1.4rem;
+    transition: transform .3s;
+}
+.nav_link{
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+}
+.dropdown-menu-show{
+    width: 96%;
+    margin-left: auto;
+    border-left: 0.2rem solid var(--color-dark);
+    transition: height .4s;
+    height: 0;
+}
