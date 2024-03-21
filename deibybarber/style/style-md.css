@@ -1,0 +1,36 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    padding: 0 2rem;
+    width: 100%;
+}
+.info-container{
+    flex-direction: row;
+}
+
+.container-service{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footer_info .phone i{
+    font-size: 1.5rem;
+}
+.footer_info .phone span{
+    font-size: 1.5rem;
+}
+/* Media Queries */
+@media (min-width: 1400px){
+    .container{
+        width: 1320px;
+    }
+    .footer-container{
+        display: flex;
+        justify-content: center;
+    }
+}
